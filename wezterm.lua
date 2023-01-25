@@ -2,7 +2,7 @@ local utils = require 'utils'
 local keys = require 'keys'
 local fonts = require 'fonts'
 
-local default_prog = {}
+local default_prog = { 'zsh', '-l' }
 local launch_menu = {}
 
 if utils.is_windows then

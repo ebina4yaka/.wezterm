@@ -2,9 +2,11 @@ local wezterm = require 'wezterm'
 
 local M = {}
 
-M.is_windows = wezterm.target_triple == 'x86_64-pc-windows-msvc'
-M.is_mac = wezterm.target_triple == 'aarch64-apple-darwin'
-M.is_linux = wezterm.target_triple == 'x86_64-unknown-linux-gnu'
+local target_triple = wezterm.target_triple
+
+M.is_windows = target_triple == 'x86_64-pc-windows-msvc'
+M.is_mac = target_triple == 'aarch64-apple-darwin'
+M.is_linux = target_triple == 'x86_64-unknown-linux-gnu'
 
 function M.merge_tables(t1, t2)
   for k, v in pairs(t2) do
