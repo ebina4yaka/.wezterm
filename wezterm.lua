@@ -1,6 +1,6 @@
-local utils = require 'utils'
-local keys = require 'keys'
-local fonts = require 'fonts'
+local utils = require('utils')
+local keys = require('keys')
+local fonts = require('fonts')
 
 local default_prog = { 'zsh', '-l' }
 local launch_menu = {}
@@ -13,11 +13,11 @@ if utils.is_windows then
   })
   table.insert(launch_menu, {
     label = 'Ubuntu (WSL2)',
-    args = { 'wsl.exe', '~', '-d', 'Ubuntu' }
+    args = { 'wsl.exe', '~', '-d', 'Ubuntu' },
   })
   table.insert(launch_menu, {
     label = 'Kali Linux (WSL2)',
-    args = { 'wsl.exe', '~', '-d', 'kali-linux' }
+    args = { 'wsl.exe', '~', '-d', 'kali-linux' },
   })
 end
 
@@ -26,7 +26,7 @@ local config = {
   default_prog = default_prog,
   adjust_window_size_when_changing_font_size = true,
   launch_menu = launch_menu,
-  keys = keys
+  keys = keys,
 }
 
 local appearance_config = {
