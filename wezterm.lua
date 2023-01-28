@@ -1,5 +1,3 @@
-local wezterm = require('wezterm')
-
 local utils = require('utils')
 local keys = require('keys')
 local fonts = require('fonts')
