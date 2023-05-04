@@ -36,7 +36,7 @@ local appearance_config = {
   font_size = fonts.font_size,
   text_background_opacity = 0.9,
   window_background_opacity = 0.85,
-  color_scheme = 'Overnight Slumber',
+  color_scheme = 'Kasugano (terminal.sexy)',
   tab_bar_at_bottom = true,
 }
 
