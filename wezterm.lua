@@ -11,6 +11,10 @@ if utils.is_windows then
   table.insert(launch_menu, {
     label = 'PowerShell',
     args = { 'pwsh.exe', '-NoLogo' },
+    })
+  table.insert(launch_menu, {
+    label = 'Arch Linux (WSL2)',
+    args = { 'wsl.exe', '~', '-d', 'Arch' },
   })
   table.insert(launch_menu, {
     label = 'Ubuntu (WSL2)',
@@ -19,7 +23,7 @@ if utils.is_windows then
   table.insert(launch_menu, {
     label = 'Kali Linux (WSL2)',
     args = { 'wsl.exe', '~', '-d', 'kali-linux' },
-  })
+    })
 end
 
 local config = {
