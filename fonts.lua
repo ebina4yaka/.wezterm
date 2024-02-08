@@ -23,10 +23,8 @@ wezterm.on('window-focus-changed', function(window, pane)
 end)
 
 return {
-  font = font('CaskaydiaCove Nerd Font', {
-    weight = 'Regular',
-    stretch = 'Normal',
-    style = 'Normal',
+  font = font('Monaspace Krypton', {
+    weight = 'Medium',
   }),
   font_size = 16,
 }
