@@ -23,7 +23,7 @@ wezterm.on('window-focus-changed', function(window, pane)
 end)
 
 return {
-  font = font('Monaspace Krypton', {
+  font = font('MonaspiceKr Nerd Font', {
     weight = 'Medium',
   }),
   font_size = 16,
