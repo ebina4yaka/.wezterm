@@ -26,5 +26,6 @@ return {
   font = font('0xProto', {
     weight = 'Medium',
   }),
+  harfbuzz_features = { 'zero', 'ss01', 'cv05' },
   font_size = 16,
 }
