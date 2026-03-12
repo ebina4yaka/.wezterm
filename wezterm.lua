@@ -7,8 +7,8 @@ local default_prog = { 'zsh', '-l' }
 local launch_menu = {}
 
 if utils.is_windows then
-  local msys2_path = 'C:\\msys64\\ucrt64\\bin\\bash.exe'
-  default_prog = { msys2_path, '--login', '-i' }
+  local msys2_path = 'C:/msys64/usr/bin/zsh.exe'
+  default_prog = { 'pwsh.exo', '-NoLogo' }
   table.insert(launch_menu, {
     label = 'MSYS2',
     args = { msys2_path, '--login', '-i' },
