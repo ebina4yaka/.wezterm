@@ -7,7 +7,12 @@ local default_prog = { 'zsh', '-l' }
 local launch_menu = {}
 
 if utils.is_windows then
-  default_prog = { 'pwsh.exe', '-NoLogo' }
+  local msys2_path = 'C:\\msys64\\ucrt64\\bin\\bash.exe'
+  default_prog = { msys2_path, '--login', '-i' }
+  table.insert(launch_menu, {
+    label = 'MSYS2',
+    args = { msys2_path, '--login', '-i' },
+  })
   table.insert(launch_menu, {
     label = 'PowerShell',
     args = { 'pwsh.exe', '-NoLogo' },
