@@ -23,7 +23,7 @@ wezterm.on('window-focus-changed', function(window, pane)
 end)
 
 return {
-  font = font('0xProto', {
+  font = font('Monaspace Krypton NF', {
     weight = 'Medium',
   }),
   harfbuzz_features = { 'zero', 'ss01', 'cv05' },

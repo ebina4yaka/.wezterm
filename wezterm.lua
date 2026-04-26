@@ -10,10 +10,6 @@ if utils.is_windows then
   local msys2_path = 'C:/msys64/usr/bin/zsh.exe'
   default_prog = { 'pwsh.exo', '-NoLogo' }
   table.insert(launch_menu, {
-    label = 'MSYS2',
-    args = { msys2_path, '--login', '-i' },
-  })
-  table.insert(launch_menu, {
     label = 'PowerShell',
     args = { 'pwsh.exe', '-NoLogo' },
   })
@@ -46,7 +42,14 @@ local appearance_config = {
   text_background_opacity = 0.9,
   window_background_opacity = 0.85,
   color_scheme = 'Kasugano (terminal.sexy)',
-  tab_bar_at_bottom = true,
+  tab_bar_at_bottom = false,
+  hide_tab_bar_if_only_one_tab = false,
+  window_decorations = 'INTEGRATED_BUTTONS | RESIZE',
+  animation_fps = 120,
+  max_fps = 120,
+  front_end = 'WebGpu',
+  webgpu_power_preference = 'HighPerformance',
+  default_cursor_style = 'BlinkingBlock',
 }
 
 return utils.merge_tables(config, appearance_config)

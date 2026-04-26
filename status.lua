@@ -33,44 +33,8 @@ local function LeftUpdate(window, pane)
   window:set_left_status(wezterm.format(elems))
 end
 
-local HEADER_DATE = { Foreground = { Color = '#ffccac' }, Text = ' ' }
-local HEADER_TIME = { Foreground = { Color = '#bcbabe' }, Text = ' ' }
-local HEADER_BATTERY = { Foreground = { Color = '#dfe166' }, Text = ' ' }
-
-local function AddElement(elems, header, str)
-  table.insert(elems, { Foreground = header.Foreground })
-  table.insert(elems, { Background = DEFAULT_BG })
-  table.insert(elems, { Text = header.Text .. SPACE_1 })
-
-  table.insert(elems, { Foreground = DEFAULT_FG })
-  table.insert(elems, { Background = DEFAULT_BG })
-  table.insert(elems, { Text = str .. SPACE_3 })
-end
-
-local function GetDate(elems)
-  AddElement(elems, HEADER_DATE, wezterm.strftime('%Y/%m/%d'))
-end
-
-local function GetTime(elems)
-  AddElement(elems, HEADER_TIME, wezterm.strftime('%H:%M:%S'))
-end
-
-local function GetBattery(elems, window)
-  if not window:get_dimensions().is_full_screen then
-    return
-  end
-
-  for _, b in ipairs(wezterm.battery_info()) do
-    AddElement(elems, HEADER_BATTERY, string.format('%.0f%%', b.state_of_charge * 100))
-  end
-end
-
 local function RightUpdate(window, pane)
   local elems = {}
-
-  GetDate(elems)
-  GetBattery(elems, window)
-  GetTime(elems)
 
   window:set_right_status(wezterm.format(elems))
 end
