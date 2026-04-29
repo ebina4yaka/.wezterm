@@ -40,15 +40,13 @@ local appearance_config = {
   font = fonts.font,
   font_size = fonts.font_size,
   text_background_opacity = 0.9,
-  window_background_opacity = 0.85,
-  color_scheme = 'Poimandres',
+  window_background_opacity = 0.8,
+  color_scheme = 'Poimandres Storm',
   tab_bar_at_bottom = false,
   hide_tab_bar_if_only_one_tab = false,
   window_decorations = 'INTEGRATED_BUTTONS | RESIZE',
   animation_fps = 120,
   max_fps = 120,
-  front_end = 'WebGpu',
-  webgpu_power_preference = 'HighPerformance',
   default_cursor_style = 'BlinkingBlock',
 }
 
